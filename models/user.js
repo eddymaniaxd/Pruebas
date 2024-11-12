@@ -26,10 +26,8 @@ const User = sequelize.define('User', {
   contrasena: {
     type: DataTypes.STRING,
     allowNull: false
-  },
-
-
-},{
+  }
+}, {
   timestamps: false
 });
 

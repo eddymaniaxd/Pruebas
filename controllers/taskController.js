@@ -15,8 +15,7 @@ const createTask = async (req, res) => {
 
 // Obtener todas las tareas del usuario
 const getTasks = async (req, res) => {
-  const userId = req.user.id;
-
+  const userId = req.body.userId;
   try {
     const tasks = await Task.findAll({ where: { userId } });
     res.status(200).json(tasks);
